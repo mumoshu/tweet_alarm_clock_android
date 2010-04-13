@@ -1,0 +1,644 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<rss version="2.0" xmlns:ldWeather="http://weather.livedoor.com/ns/rss/2.0">
+<channel>
+<title>1次細分区定義表 - livedoor 天気情報</title>
+<link>http://weather.livedoor.com/?r=rss</link>
+<description>livedoor 天気情報で使用されている1次細分区の定義表。それぞれの地点のRSSフィードURLと、お天気Webサービスで対応するidが定義されています。</description>
+<lastBuildDate>Mon, 12 Apr 2010 11:00:00 +0900</lastBuildDate>
+
+<author>livedoor Weather Team.</author>
+<language>ja</language>
+<category>天気情報</category>
+<generator>http://weather.livedoor.com/</generator>
+<copyright>Copyright (C) 1996-2010 livedoor Co.,Ltd. All rights reserved.</copyright>
+<image>
+<title>livedoor 天気情報</title>
+<link>http://weather.livedoor.com</link>
+<url>http://image.weather.livedoor.com/img/cmn/livedoor.gif</url>
+<width>118</width>
+<height>26</height>
+</image>
+<ldWeather:provider name="（株）ハレックス" link="http://www.halex.co.jp/halexbrain/weather/" />
+<ldWeather:provider name="日本気象協会" link="http://tenki.jp/" />
+<ldWeather:notes link="http://weather.livedoor.com/weather_hacks/forum.html">livedoor 天気情報 Weather Hacks での疑問点などは http://weather.livedoor.com/weather_hacks/forum.html で質問してみましょう！</ldWeather:notes>
+
+
+<ldWeather:source title="全国" link="http://weather.livedoor.com/forecast/rss/index.xml">
+
+<area title="北海道地方" source="http://weather.livedoor.com/forecast/rss/1.xml">
+
+<pref title="道北">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/1a.xml" />
+
+<city title="稚内" id="1" source="http://weather.livedoor.com/forecast/rss/1a/1.xml" />
+
+
+<city title="旭川" id="2" source="http://weather.livedoor.com/forecast/rss/1a/2.xml" />
+
+
+<city title="留萌" id="3" source="http://weather.livedoor.com/forecast/rss/1a/3.xml" />
+</pref>
+
+<pref title="道央">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/1b.xml" />
+
+<city title="札幌" id="4" source="http://weather.livedoor.com/forecast/rss/1b/4.xml" />
+
+
+<city title="岩見沢" id="5" source="http://weather.livedoor.com/forecast/rss/1b/5.xml" />
+
+
+<city title="倶知安" id="6" source="http://weather.livedoor.com/forecast/rss/1b/6.xml" />
+</pref>
+
+<pref title="道東">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/1c.xml" />
+
+<city title="網走" id="7" source="http://weather.livedoor.com/forecast/rss/1c/7.xml" />
+
+
+<city title="北見" id="8" source="http://weather.livedoor.com/forecast/rss/1c/8.xml" />
+
+
+<city title="紋別" id="9" source="http://weather.livedoor.com/forecast/rss/1c/9.xml" />
+
+
+<city title="根室" id="10" source="http://weather.livedoor.com/forecast/rss/1c/10.xml" />
+
+
+<city title="釧路" id="11" source="http://weather.livedoor.com/forecast/rss/1c/11.xml" />
+
+
+<city title="帯広" id="12" source="http://weather.livedoor.com/forecast/rss/1c/12.xml" />
+</pref>
+
+<pref title="道南">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/1d.xml" />
+
+<city title="室蘭" id="13" source="http://weather.livedoor.com/forecast/rss/1d/13.xml" />
+
+
+<city title="浦河" id="14" source="http://weather.livedoor.com/forecast/rss/1d/14.xml" />
+
+
+<city title="函館" id="15" source="http://weather.livedoor.com/forecast/rss/1d/15.xml" />
+
+
+<city title="江差" id="16" source="http://weather.livedoor.com/forecast/rss/1d/16.xml" />
+</pref></area>
+
+<area title="東北地方" source="http://weather.livedoor.com/forecast/rss/2.xml">
+
+<pref title="青森県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/2.xml" />
+
+<city title="青森" id="17" source="http://weather.livedoor.com/forecast/rss/2/17.xml" />
+
+
+<city title="むつ" id="18" source="http://weather.livedoor.com/forecast/rss/2/18.xml" />
+
+
+<city title="八戸" id="19" source="http://weather.livedoor.com/forecast/rss/2/19.xml" />
+</pref>
+
+<pref title="秋田県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/5.xml" />
+
+<city title="秋田" id="20" source="http://weather.livedoor.com/forecast/rss/5/20.xml" />
+
+
+<city title="横手" id="21" source="http://weather.livedoor.com/forecast/rss/5/21.xml" />
+</pref>
+
+<pref title="岩手県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/3.xml" />
+
+<city title="盛岡" id="22" source="http://weather.livedoor.com/forecast/rss/3/22.xml" />
+
+
+<city title="宮古" id="23" source="http://weather.livedoor.com/forecast/rss/3/23.xml" />
+
+
+<city title="大船渡" id="24" source="http://weather.livedoor.com/forecast/rss/3/24.xml" />
+</pref>
+
+<pref title="宮城県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/4.xml" />
+
+<city title="仙台" id="25" source="http://weather.livedoor.com/forecast/rss/4/25.xml" />
+
+
+<city title="白石" id="26" source="http://weather.livedoor.com/forecast/rss/4/26.xml" />
+</pref>
+
+<pref title="山形県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/6.xml" />
+
+<city title="山形" id="27" source="http://weather.livedoor.com/forecast/rss/6/27.xml" />
+
+
+<city title="米沢" id="28" source="http://weather.livedoor.com/forecast/rss/6/28.xml" />
+
+
+<city title="酒田" id="29" source="http://weather.livedoor.com/forecast/rss/6/29.xml" />
+
+
+<city title="新庄" id="30" source="http://weather.livedoor.com/forecast/rss/6/30.xml" />
+</pref>
+
+<pref title="福島県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/7.xml" />
+
+<city title="福島" id="31" source="http://weather.livedoor.com/forecast/rss/7/31.xml" />
+
+
+<city title="小名浜" id="32" source="http://weather.livedoor.com/forecast/rss/7/32.xml" />
+
+
+<city title="若松" id="33" source="http://weather.livedoor.com/forecast/rss/7/33.xml" />
+</pref></area>
+
+<area title="関東地方" source="http://weather.livedoor.com/forecast/rss/3.xml">
+
+<pref title="茨城県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/8.xml" />
+
+<city title="水戸" id="54" source="http://weather.livedoor.com/forecast/rss/8/54.xml" />
+
+
+<city title="土浦" id="55" source="http://weather.livedoor.com/forecast/rss/8/55.xml" />
+</pref>
+
+<pref title="栃木県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/9.xml" />
+
+<city title="宇都宮" id="56" source="http://weather.livedoor.com/forecast/rss/9/56.xml" />
+
+
+<city title="大田原" id="57" source="http://weather.livedoor.com/forecast/rss/9/57.xml" />
+</pref>
+
+<pref title="群馬県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/10.xml" />
+
+<city title="前橋" id="58" source="http://weather.livedoor.com/forecast/rss/10/58.xml" />
+
+
+<city title="みなかみ" id="59" source="http://weather.livedoor.com/forecast/rss/10/59.xml" />
+</pref>
+
+<pref title="埼玉県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/11.xml" />
+
+<city title="さいたま" id="60" source="http://weather.livedoor.com/forecast/rss/11/60.xml" />
+
+
+<city title="熊谷" id="61" source="http://weather.livedoor.com/forecast/rss/11/61.xml" />
+
+
+<city title="秩父" id="62" source="http://weather.livedoor.com/forecast/rss/11/62.xml" />
+</pref>
+
+<pref title="東京都">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/13.xml" />
+
+<city title="東京" id="63" source="http://weather.livedoor.com/forecast/rss/13/63.xml" />
+
+
+<city title="大島" id="64" source="http://weather.livedoor.com/forecast/rss/13/64.xml" />
+
+
+<city title="八丈島" id="65" source="http://weather.livedoor.com/forecast/rss/13/65.xml" />
+
+
+<city title="父島" id="66" source="http://weather.livedoor.com/forecast/rss/13/66.xml" />
+</pref>
+
+<pref title="千葉県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/12.xml" />
+
+<city title="千葉" id="67" source="http://weather.livedoor.com/forecast/rss/12/67.xml" />
+
+
+<city title="銚子" id="68" source="http://weather.livedoor.com/forecast/rss/12/68.xml" />
+
+
+<city title="館山" id="69" source="http://weather.livedoor.com/forecast/rss/12/69.xml" />
+</pref>
+
+<pref title="神奈川県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/14.xml" />
+
+<city title="横浜" id="70" source="http://weather.livedoor.com/forecast/rss/14/70.xml" />
+
+
+<city title="小田原" id="71" source="http://weather.livedoor.com/forecast/rss/14/71.xml" />
+</pref>
+
+<pref title="山梨県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/19.xml" />
+
+<city title="甲府" id="75" source="http://weather.livedoor.com/forecast/rss/19/75.xml" />
+
+
+<city title="河口湖" id="76" source="http://weather.livedoor.com/forecast/rss/19/76.xml" />
+</pref></area>
+
+<area title="信越・北陸地方" source="http://weather.livedoor.com/forecast/rss/4.xml">
+
+<pref title="富山県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/16.xml" />
+
+<city title="富山" id="44" source="http://weather.livedoor.com/forecast/rss/16/44.xml" />
+
+
+<city title="伏木" id="45" source="http://weather.livedoor.com/forecast/rss/16/45.xml" />
+</pref>
+
+<pref title="石川県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/17.xml" />
+
+<city title="金沢" id="46" source="http://weather.livedoor.com/forecast/rss/17/46.xml" />
+
+
+<city title="輪島" id="47" source="http://weather.livedoor.com/forecast/rss/17/47.xml" />
+</pref>
+
+<pref title="福井県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/18.xml" />
+
+<city title="福井" id="48" source="http://weather.livedoor.com/forecast/rss/18/48.xml" />
+
+
+<city title="敦賀" id="49" source="http://weather.livedoor.com/forecast/rss/18/49.xml" />
+</pref>
+
+<pref title="新潟県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/15.xml" />
+
+<city title="新潟" id="50" source="http://weather.livedoor.com/forecast/rss/15/50.xml" />
+
+
+<city title="長岡" id="51" source="http://weather.livedoor.com/forecast/rss/15/51.xml" />
+
+
+<city title="高田" id="52" source="http://weather.livedoor.com/forecast/rss/15/52.xml" />
+
+
+<city title="相川" id="53" source="http://weather.livedoor.com/forecast/rss/15/53.xml" />
+</pref>
+
+<pref title="長野県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/20.xml" />
+
+<city title="長野" id="72" source="http://weather.livedoor.com/forecast/rss/20/72.xml" />
+
+
+<city title="松本" id="73" source="http://weather.livedoor.com/forecast/rss/20/73.xml" />
+
+
+<city title="飯田" id="74" source="http://weather.livedoor.com/forecast/rss/20/74.xml" />
+</pref></area>
+
+<area title="東海地方" source="http://weather.livedoor.com/forecast/rss/5.xml">
+
+<pref title="静岡県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/22.xml" />
+
+<city title="静岡" id="34" source="http://weather.livedoor.com/forecast/rss/22/34.xml" />
+
+
+<city title="網代" id="35" source="http://weather.livedoor.com/forecast/rss/22/35.xml" />
+
+
+<city title="三島" id="36" source="http://weather.livedoor.com/forecast/rss/22/36.xml" />
+
+
+<city title="浜松" id="37" source="http://weather.livedoor.com/forecast/rss/22/37.xml" />
+</pref>
+
+<pref title="愛知県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/23.xml" />
+
+<city title="名古屋" id="38" source="http://weather.livedoor.com/forecast/rss/23/38.xml" />
+
+
+<city title="豊橋" id="39" source="http://weather.livedoor.com/forecast/rss/23/39.xml" />
+</pref>
+
+<pref title="岐阜県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/21.xml" />
+
+<city title="岐阜" id="40" source="http://weather.livedoor.com/forecast/rss/21/40.xml" />
+
+
+<city title="高山" id="41" source="http://weather.livedoor.com/forecast/rss/21/41.xml" />
+</pref>
+
+<pref title="三重県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/24.xml" />
+
+<city title="津" id="42" source="http://weather.livedoor.com/forecast/rss/24/42.xml" />
+
+
+<city title="尾鷲" id="43" source="http://weather.livedoor.com/forecast/rss/24/43.xml" />
+</pref></area>
+
+<area title="近畿地方" source="http://weather.livedoor.com/forecast/rss/6.xml">
+
+<pref title="滋賀県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/25.xml" />
+
+<city title="大津" id="77" source="http://weather.livedoor.com/forecast/rss/25/77.xml" />
+
+
+<city title="彦根" id="78" source="http://weather.livedoor.com/forecast/rss/25/78.xml" />
+</pref>
+
+<pref title="京都府">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/26.xml" />
+
+<city title="京都" id="79" source="http://weather.livedoor.com/forecast/rss/26/79.xml" />
+
+
+<city title="舞鶴" id="80" source="http://weather.livedoor.com/forecast/rss/26/80.xml" />
+</pref>
+
+<pref title="大阪府">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/27.xml" />
+
+<city title="大阪" id="81" source="http://weather.livedoor.com/forecast/rss/27/81.xml" />
+</pref>
+
+<pref title="兵庫県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/28.xml" />
+
+<city title="神戸" id="82" source="http://weather.livedoor.com/forecast/rss/28/82.xml" />
+
+
+<city title="豊岡" id="83" source="http://weather.livedoor.com/forecast/rss/28/83.xml" />
+</pref>
+
+<pref title="奈良県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/29.xml" />
+
+<city title="奈良" id="84" source="http://weather.livedoor.com/forecast/rss/29/84.xml" />
+
+
+<city title="風屋" id="85" source="http://weather.livedoor.com/forecast/rss/29/85.xml" />
+</pref>
+
+<pref title="和歌山県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/30.xml" />
+
+<city title="和歌山" id="86" source="http://weather.livedoor.com/forecast/rss/30/86.xml" />
+
+
+<city title="潮岬" id="87" source="http://weather.livedoor.com/forecast/rss/30/87.xml" />
+</pref></area>
+
+<area title="中国地方" source="http://weather.livedoor.com/forecast/rss/7.xml">
+
+<pref title="岡山県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/33.xml" />
+
+<city title="岡山" id="88" source="http://weather.livedoor.com/forecast/rss/33/88.xml" />
+
+
+<city title="津山" id="89" source="http://weather.livedoor.com/forecast/rss/33/89.xml" />
+</pref>
+
+<pref title="広島県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/34.xml" />
+
+<city title="広島" id="90" source="http://weather.livedoor.com/forecast/rss/34/90.xml" />
+
+
+<city title="庄原" id="91" source="http://weather.livedoor.com/forecast/rss/34/91.xml" />
+</pref>
+
+<pref title="島根県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/32.xml" />
+
+<city title="松江" id="92" source="http://weather.livedoor.com/forecast/rss/32/92.xml" />
+
+
+<city title="浜田" id="93" source="http://weather.livedoor.com/forecast/rss/32/93.xml" />
+
+
+<city title="西郷" id="94" source="http://weather.livedoor.com/forecast/rss/32/94.xml" />
+</pref>
+
+<pref title="鳥取県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/31.xml" />
+
+<city title="鳥取" id="95" source="http://weather.livedoor.com/forecast/rss/31/95.xml" />
+
+
+<city title="米子" id="96" source="http://weather.livedoor.com/forecast/rss/31/96.xml" />
+</pref>
+
+<pref title="山口県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/35.xml" />
+
+<city title="下関" id="97" source="http://weather.livedoor.com/forecast/rss/35/97.xml" />
+
+
+<city title="山口" id="98" source="http://weather.livedoor.com/forecast/rss/35/98.xml" />
+
+
+<city title="柳井" id="99" source="http://weather.livedoor.com/forecast/rss/35/99.xml" />
+
+
+<city title="萩" id="100" source="http://weather.livedoor.com/forecast/rss/35/100.xml" />
+</pref></area>
+
+<area title="四国地方" source="http://weather.livedoor.com/forecast/rss/8.xml">
+
+<pref title="徳島県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/36.xml" />
+
+<city title="徳島" id="101" source="http://weather.livedoor.com/forecast/rss/36/101.xml" />
+
+
+<city title="日和佐" id="102" source="http://weather.livedoor.com/forecast/rss/36/102.xml" />
+</pref>
+
+<pref title="香川県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/37.xml" />
+
+<city title="高松" id="103" source="http://weather.livedoor.com/forecast/rss/37/103.xml" />
+</pref>
+
+<pref title="愛媛県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/38.xml" />
+
+<city title="松山" id="104" source="http://weather.livedoor.com/forecast/rss/38/104.xml" />
+
+
+<city title="新居浜" id="105" source="http://weather.livedoor.com/forecast/rss/38/105.xml" />
+
+
+<city title="宇和島" id="106" source="http://weather.livedoor.com/forecast/rss/38/106.xml" />
+</pref>
+
+<pref title="高知県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/39.xml" />
+
+<city title="高知" id="107" source="http://weather.livedoor.com/forecast/rss/39/107.xml" />
+
+
+<city title="室戸" id="108" source="http://weather.livedoor.com/forecast/rss/39/108.xml" />
+
+
+<city title="清水" id="109" source="http://weather.livedoor.com/forecast/rss/39/109.xml" />
+</pref></area>
+
+<area title="九州地方" source="http://weather.livedoor.com/forecast/rss/9.xml">
+
+<pref title="福岡県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/40.xml" />
+
+<city title="福岡" id="110" source="http://weather.livedoor.com/forecast/rss/40/110.xml" />
+
+
+<city title="八幡" id="111" source="http://weather.livedoor.com/forecast/rss/40/111.xml" />
+
+
+<city title="飯塚" id="112" source="http://weather.livedoor.com/forecast/rss/40/112.xml" />
+
+
+<city title="久留米" id="113" source="http://weather.livedoor.com/forecast/rss/40/113.xml" />
+</pref>
+
+<pref title="大分県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/44.xml" />
+
+<city title="大分" id="114" source="http://weather.livedoor.com/forecast/rss/44/114.xml" />
+
+
+<city title="中津" id="115" source="http://weather.livedoor.com/forecast/rss/44/115.xml" />
+
+
+<city title="日田" id="116" source="http://weather.livedoor.com/forecast/rss/44/116.xml" />
+
+
+<city title="佐伯" id="117" source="http://weather.livedoor.com/forecast/rss/44/117.xml" />
+</pref>
+
+<pref title="長崎県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/42.xml" />
+
+<city title="長崎" id="118" source="http://weather.livedoor.com/forecast/rss/42/118.xml" />
+
+
+<city title="佐世保" id="119" source="http://weather.livedoor.com/forecast/rss/42/119.xml" />
+
+
+<city title="厳原" id="120" source="http://weather.livedoor.com/forecast/rss/42/120.xml" />
+
+
+<city title="福江" id="121" source="http://weather.livedoor.com/forecast/rss/42/121.xml" />
+</pref>
+
+<pref title="佐賀県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/41.xml" />
+
+<city title="佐賀" id="122" source="http://weather.livedoor.com/forecast/rss/41/122.xml" />
+
+
+<city title="伊万里" id="123" source="http://weather.livedoor.com/forecast/rss/41/123.xml" />
+</pref>
+
+<pref title="熊本県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/43.xml" />
+
+<city title="熊本" id="124" source="http://weather.livedoor.com/forecast/rss/43/124.xml" />
+
+
+<city title="阿蘇乙姫" id="125" source="http://weather.livedoor.com/forecast/rss/43/125.xml" />
+
+
+<city title="牛深" id="126" source="http://weather.livedoor.com/forecast/rss/43/126.xml" />
+
+
+<city title="人吉" id="127" source="http://weather.livedoor.com/forecast/rss/43/127.xml" />
+</pref>
+
+<pref title="宮崎県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/45.xml" />
+
+<city title="宮崎" id="128" source="http://weather.livedoor.com/forecast/rss/45/128.xml" />
+
+
+<city title="延岡" id="129" source="http://weather.livedoor.com/forecast/rss/45/129.xml" />
+
+
+<city title="都城" id="130" source="http://weather.livedoor.com/forecast/rss/45/130.xml" />
+
+
+<city title="高千穂" id="131" source="http://weather.livedoor.com/forecast/rss/45/131.xml" />
+</pref>
+
+<pref title="鹿児島県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/46.xml" />
+
+<city title="鹿児島" id="132" source="http://weather.livedoor.com/forecast/rss/46/132.xml" />
+
+
+<city title="鹿屋" id="133" source="http://weather.livedoor.com/forecast/rss/46/133.xml" />
+
+
+<city title="種子島" id="134" source="http://weather.livedoor.com/forecast/rss/46/134.xml" />
+
+
+<city title="名瀬" id="135" source="http://weather.livedoor.com/forecast/rss/46/135.xml" />
+</pref></area>
+
+<area title="南西諸島地方" source="http://weather.livedoor.com/forecast/rss/10.xml">
+
+<pref title="沖縄県">
+<warn title="警報・注意報" source="http://weather.livedoor.com/forecast/rss/warn/47.xml" />
+
+<city title="那覇" id="136" source="http://weather.livedoor.com/forecast/rss/47/136.xml" />
+
+
+<city title="名護" id="137" source="http://weather.livedoor.com/forecast/rss/47/137.xml" />
+
+
+<city title="久米島" id="138" source="http://weather.livedoor.com/forecast/rss/47/138.xml" />
+
+
+<city title="南大東島" id="139" source="http://weather.livedoor.com/forecast/rss/47/139.xml" />
+
+
+<city title="宮古島" id="140" source="http://weather.livedoor.com/forecast/rss/47/140.xml" />
+
+
+<city title="石垣島" id="141" source="http://weather.livedoor.com/forecast/rss/47/141.xml" />
+
+
+<city title="与那国島" id="142" source="http://weather.livedoor.com/forecast/rss/47/142.xml" />
+</pref></area>
+
+</ldWeather:source>
+
+<item>
+  <title>[ PR ] ブログで道北のお天気を簡単ゲット！</title>
+  <link>http://weather.livedoor.com/weather_hacks/plugin.html?pref=1a</link>
+  <category>PR</category>
+  <description>
+livedoor 天気情報「Weather Hacks」では一般のブロガーの皆さん向けにブログでお天気を表示できる、お天気プラグインを公開しました。使い方はとってもカンタン！手順に沿って作成したHTMLソースを自分のブログに貼り付けるだけです！
+  </description>
+  <image>
+    <title>お天気プラグイン - livedoor 天気情報</title>
+    <link>http://weather.livedoor.com/weather_hacks/plugin.html?pref=1a</link>
+    <url>http://image.weather.livedoor.com/img/weather_hacks/news_title.gif</url>
+    <width>151</width>
+    <height>50</height>
+  </image>  <pubDate>Mon, 12 Apr 2010 08:00:00 +0900</pubDate>
+</item>
+
+
+</channel>
+</rss>
