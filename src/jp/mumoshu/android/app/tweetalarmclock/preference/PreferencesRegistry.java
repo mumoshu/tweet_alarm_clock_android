@@ -11,6 +11,7 @@ public class PreferencesRegistry {
 		p = c.getSharedPreferences("TweetAlarmClock", Context.MODE_PRIVATE);
 	}
 	public Editor getEditor(){
+		
     	return p.edit();
 	}
 	public PreferencesRegistry putTime(TimePicker timePicker){

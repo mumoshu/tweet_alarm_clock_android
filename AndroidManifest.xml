@@ -11,9 +11,10 @@
             </intent-filter>
         </activity>
 
-    <service android:name=".service.Timekeeper"></service>
+    
 <activity android:name=".activity.VideoPlayer"></activity>
 <activity android:name=".activity.Tweeter"></activity>
+<activity android:name=".activity.AlarmClock"></activity>
 </application>
 
 

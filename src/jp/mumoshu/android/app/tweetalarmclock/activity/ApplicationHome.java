@@ -5,8 +5,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.mumoshu.android.app.tweetalarmclock.R;
+import jp.mumoshu.android.app.tweetalarmclock.controller.ActivityWakeupper;
 import jp.mumoshu.android.app.tweetalarmclock.preference.PreferencesRegistry;
 import android.app.Activity;
+import android.app.PendingIntent.CanceledException;
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Environment;
@@ -115,8 +117,12 @@ public class ApplicationHome extends Activity {
     }
     
     private void throwIntent(){
-    	Intent intent = new Intent(getApplicationContext(), VideoPlayer.class);
-    	startActivity(intent);
+    	try {
+			new ActivityWakeupper(this)
+				.startActivityOnceAfterSeconds(VideoPlayer.class, 5);
+		} catch (CanceledException e) {
+			Log.e(this.getClass().toString(), "CanceledException", e);
+		}
     }
     
     public void onClickOKButton(){
