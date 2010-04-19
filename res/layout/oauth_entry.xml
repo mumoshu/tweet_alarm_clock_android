@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="vertical" android:paddingTop="16px" android:layout_width="fill_parent" android:layout_height="fill_parent">
+<TextView android:id="@+id/TextView01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="ユーザー名 "></TextView>
+<EditText android:id="@+id/EditText01" android:layout_height="wrap_content" android:layout_width="fill_parent" android:text="未登録 " android:freezesText="true" android:textColor="#666666"></EditText><Button android:id="@+id/Button01" android:layout_width="wrap_content" android:layout_height="wrap_content" android:text="OAuthで認証する " android:layout_marginTop="5px"></Button>
+
+</LinearLayout>

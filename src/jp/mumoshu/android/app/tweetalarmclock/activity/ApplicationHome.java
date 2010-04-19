@@ -8,6 +8,7 @@ import jp.mumoshu.android.app.tweetalarmclock.R;
 import jp.mumoshu.android.app.tweetalarmclock.controller.ActivityWakeupper;
 import jp.mumoshu.android.app.tweetalarmclock.preference.PreferencesRegistry;
 import android.app.Activity;
+import android.app.PendingIntent;
 import android.app.PendingIntent.CanceledException;
 import android.content.Intent;
 import android.os.Bundle;
@@ -126,8 +127,19 @@ public class ApplicationHome extends Activity {
     }
     
     public void onClickOKButton(){
-    	putPreferences();
-    	throwIntent();
-    	finish();
+    	Intent intent = new Intent(this, OAuthEntry.class);
+    	PendingIntent sender = PendingIntent.getActivity(this, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+    	try {
+			sender.send();
+		} catch (CanceledException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+//    	startActivityForResult( new Intent(Intent.ACTION_PICK,
+//    			android.provider.MediaStore.Video.Media.INTERNAL_CONTENT_URI), 0);
+
+//    	putPreferences();
+//    	throwIntent();
+//    	finish();
     }
 }

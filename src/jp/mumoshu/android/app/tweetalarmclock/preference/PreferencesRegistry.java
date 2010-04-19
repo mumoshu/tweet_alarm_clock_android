@@ -1,5 +1,6 @@
 package jp.mumoshu.android.app.tweetalarmclock.preference;
 
+import oauth.signpost.OAuthConsumer;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
@@ -29,5 +30,17 @@ public class PreferencesRegistry {
 	}
 	public String getFile() {
 		return p.getString("play", "");
+	}
+	public PreferencesRegistry saveConsumer(OAuthConsumer consumer){
+		getEditor()
+			.putString("token", consumer.getToken())
+			.putString("token_secret", consumer.getTokenSecret())
+			.commit();
+		return this;
+	}
+	public void loadConsumer(OAuthConsumer consumer){
+		consumer.setTokenWithSecret(
+				p.getString("token", ""),
+				p.getString("token_secret", ""));
 	}
 }
