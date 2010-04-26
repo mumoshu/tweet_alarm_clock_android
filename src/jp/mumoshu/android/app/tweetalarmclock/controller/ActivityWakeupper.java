@@ -2,6 +2,8 @@ package jp.mumoshu.android.app.tweetalarmclock.controller;
 
 import java.util.Calendar;
 
+import jp.mumoshu.android.app.tweetalarmclock.activity.OAuthEntry;
+
 import android.app.AlarmManager;
 import android.app.PendingIntent;
 import android.app.Service;
@@ -23,8 +25,7 @@ public class ActivityWakeupper {
 	}
 
 	public void startActivityOnceAt(Class<?> activityClass, Calendar cal) throws CanceledException{
-		Intent intent= new Intent(context, activityClass);
-		PendingIntent sender = PendingIntent.getActivity(context, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+		PendingIntent sender = getPendingIntentForNewActivity(activityClass);
 		setWakeup(sender, cal);
 	}
 	
@@ -32,5 +33,14 @@ public class ActivityWakeupper {
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.SECOND, cal.get(Calendar.SECOND) + seconds);
 		startActivityOnceAt(activityClass, cal);
+	}
+
+	public PendingIntent getPendingIntentForNewActivity(Class<?> activityClass){
+		Intent intent = new Intent(context, activityClass);
+		return PendingIntent.getActivity(context, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
+	}
+	
+	public void startActivity(Class<?> activityClass) throws CanceledException {
+		getPendingIntentForNewActivity(activityClass).send();
 	}
 }

@@ -127,19 +127,10 @@ public class ApplicationHome extends Activity {
     }
     
     public void onClickOKButton(){
-    	Intent intent = new Intent(this, OAuthEntry.class);
-    	PendingIntent sender = PendingIntent.getActivity(this, 0, intent, Intent.FLAG_ACTIVITY_NEW_TASK);
-    	try {
-			sender.send();
-		} catch (CanceledException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
 //    	startActivityForResult( new Intent(Intent.ACTION_PICK,
 //    			android.provider.MediaStore.Video.Media.INTERNAL_CONTENT_URI), 0);
-
-//    	putPreferences();
 //    	throwIntent();
-//    	finish();
+    	putPreferences();
+    	finish();
     }
 }
