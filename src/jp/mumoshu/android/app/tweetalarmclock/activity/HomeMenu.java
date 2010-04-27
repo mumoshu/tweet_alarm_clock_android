@@ -23,7 +23,7 @@ public class HomeMenu extends ListActivity {
 			.add("時刻設定", new OnClickHandler(){
 				@Override
 				public void onClick(){
-					startActivityFromThis(ApplicationHome.class);
+					startActivityFromThis(AlarmSet.class);
 				}
 			})
 			.add("Twitterアカウント", new OnClickHandler(){

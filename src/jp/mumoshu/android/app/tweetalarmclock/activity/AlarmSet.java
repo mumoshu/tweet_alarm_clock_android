@@ -2,6 +2,7 @@ package jp.mumoshu.android.app.tweetalarmclock.activity;
 
 import java.io.File;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 
 import jp.mumoshu.android.app.tweetalarmclock.R;
@@ -23,7 +24,7 @@ import android.widget.Spinner;
 import android.widget.TimePicker;
 import android.widget.AdapterView.OnItemSelectedListener;
 
-public class ApplicationHome extends Activity {
+public class AlarmSet extends Activity {
     private Button okButton;
 	private Spinner fileSpinner;
 	private TimePicker timePicker;
@@ -125,12 +126,33 @@ public class ApplicationHome extends Activity {
 			Log.e(this.getClass().toString(), "CanceledException", e);
 		}
     }
-    
+     
     public void onClickOKButton(){
 //    	startActivityForResult( new Intent(Intent.ACTION_PICK,
 //    			android.provider.MediaStore.Video.Media.INTERNAL_CONTENT_URI), 0);
 //    	throwIntent();
+    	try {
+			new ActivityWakeupper(this).startActivityOnceAt(VideoPlayer.class, getNextAlarmCalendar());
+		} catch (CanceledException e) {
+			Log.e(getClass().toString(), "canceled running the activity", e);
+		}
     	putPreferences();
     	finish();
     }
+    
+    private Calendar getNextAlarmCalendar() {
+    	return getNextAlarmCalendar(timePicker.getCurrentHour(), timePicker.getCurrentMinute());
+    }
+
+	private Calendar getNextAlarmCalendar(int hour, int minute) {
+		Calendar now            = Calendar.getInstance();
+		Calendar todaysAlarm    = Calendar.getInstance();
+		Calendar tomorrowsAlarm;
+		todaysAlarm.set(Calendar.HOUR_OF_DAY, hour);
+		todaysAlarm.set(Calendar.MINUTE, minute);
+		tomorrowsAlarm = (Calendar)todaysAlarm.clone();
+		tomorrowsAlarm.add(Calendar.DAY_OF_MONTH, 1);
+		Calendar nextAlarm = todaysAlarm.before(now) ? tomorrowsAlarm : todaysAlarm;
+		return nextAlarm;
+	}
 }
