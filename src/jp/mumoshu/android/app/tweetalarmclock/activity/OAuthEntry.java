@@ -5,8 +5,8 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.mumoshu.android.app.tweetalarmclock.R;
+import jp.mumoshu.android.app.tweetalarmclock.controller.TwitterClient;
 import jp.mumoshu.android.app.tweetalarmclock.preference.PreferencesRegistry;
-import oauth.signpost.OAuthProvider;
 import oauth.signpost.basic.DefaultOAuthProvider;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import oauth.signpost.exception.OAuthCommunicationException;
@@ -44,10 +44,7 @@ import android.widget.Toast;
 public class OAuthEntry extends Activity {
 	private TextView userNameView;
 	private Button proceedButton;
-	private CommonsHttpOAuthConsumer consumer = new CommonsHttpOAuthConsumer("Znfa4v4ZSnoV0SLk8MKLA",
-	"HWjzwsIeFWLOpGLXLTyHC0mOiCLlDO3GSTZQ8MKzFTA");;
-	private OAuthProvider provider = new DefaultOAuthProvider("http://api.twitter.com/oauth/request_token",
-			"http://api.twitter.com/oauth/access_token", "http://api.twitter.com/oauth/authorize");;
+	private TwitterClient data;
 
 	/** Called when the activity is first created. */
     @Override
@@ -62,12 +59,9 @@ public class OAuthEntry extends Activity {
 				runBrowserToAuthorize();
 			}
 		});
-        initOAuthClient();
         logInfo("onCreate");
+        data = TwitterClient.getInstance(this);
     }
-
-	private void initOAuthClient() {
-	}
 
 	@Override
 	protected void onNewIntent(Intent intent) {
@@ -92,11 +86,8 @@ public class OAuthEntry extends Activity {
 			return;
 		}
 		oauthVerifier = uri.getQueryParameter(oauth.signpost.OAuth.OAUTH_VERIFIER);
-		logInfo("oauth_token(oauthVerifier):" + oauthVerifier);
-		try {
-			//new PreferencesRegistry(this).loadConsumer(consumer);
-			logConsumer(consumer);
-			provider.retrieveAccessToken(consumer, oauthVerifier);
+		try{
+			data.retrieveAccessToken(oauthVerifier);
 		} catch (Exception e) {
 			Log.e("OAuthEntry", "while retrieving access token", e);
 			authErrorToast();
@@ -104,45 +95,20 @@ public class OAuthEntry extends Activity {
 		}
 		tweetMessage();
 	}
-	
-	private void logConsumer(CommonsHttpOAuthConsumer consumer) {
-		logInfo("consumer: ");
-		logInfo("token: " + consumer.getToken());
-		logInfo("token_secret: " + consumer.getTokenSecret());
-	}
 
 	private void tweetMessage(){
 		try {
-			tweetStatus("test");
+			data.tweetStatus("test");
 		} catch (Exception e) {
 			Log.e("OAuthEntry", "while tweeting", e);
 			toast("通信に失敗しました。しばらく待ってからもう一度お試しください。");
 		}
 	}
 
-	private void tweetStatus(String status) throws OAuthMessageSignerException, OAuthExpectationFailedException, OAuthCommunicationException, ClientProtocolException, IOException {
-		final String apiUrl = "http://api.twitter.com/1/statuses/update.json";
-		HttpPost req = new HttpPost(apiUrl);
-		final List<NameValuePair> params = new ArrayList<NameValuePair>();
-		params.add(new BasicNameValuePair("status", status));
-		req.setEntity(new UrlEncodedFormEntity(params, HTTP.UTF_8));
-		// set this to avoid 417 error (Expectation Failed)  
-		req.getParams().setBooleanParameter(CoreProtocolPNames.USE_EXPECT_CONTINUE, false);  
-		consumer.sign(req);
-		HttpClient client = new DefaultHttpClient();
-		HttpResponse response = client.execute(req);
-		final String reason = response.getStatusLine().getReasonPhrase();
-		int statusCode = response.getStatusLine().getStatusCode();
-		Log.i("OAuthEntry", "statusCode: " + String.valueOf(statusCode));
-		Log.i("OAuthEntry", "reason: " + reason);
-	}
-
 	protected void runBrowserToAuthorize() {
 		String authUrl = null;
 		try {
-			authUrl = provider.retrieveRequestToken(consumer, "imaokitter:///");
-			logConsumer(consumer);
-			new PreferencesRegistry(this).saveConsumer(consumer);
+			authUrl = data.retrieveRequestToken(data.consumer, "imaokitter:///");
 		} catch (Exception e){
 			Log.e("OAuthEntry", "while requesting a request token", e);
 		}
