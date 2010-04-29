@@ -33,6 +33,7 @@ public class VideoPlayer extends Activity implements OnClickListener {
 
 	@Override
 	public void onClick(View v) {
+		videoView.stopPlayback();
 		finish();
 	}
 	
