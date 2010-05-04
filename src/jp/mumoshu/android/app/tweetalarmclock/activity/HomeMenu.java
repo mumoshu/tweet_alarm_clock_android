@@ -2,6 +2,7 @@ package jp.mumoshu.android.app.tweetalarmclock.activity;
 
 import java.util.List;
 
+import jp.mumoshu.android.app.tweetalarmclock.AlarmSet;
 import jp.mumoshu.android.app.tweetalarmclock.R;
 import android.app.ListActivity;
 import android.content.Intent;

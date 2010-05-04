@@ -2,6 +2,11 @@
 <PreferenceScreen
   xmlns:android="http://schemas.android.com/apk/res/android">
 <PreferenceCategory><EditTextPreference android:key="message" android:dialogMessage="アラームを消したときに以下の内容をつぶやきます" android:title="おはようメッセージ" android:summary="summary1"></EditTextPreference>
+<Preference android:title="アラーム設定" android:summary="summary" android:key="alarm">
+            <intent android:action="android.intent.action.VIEW"
+            		android:targetPackage="jp.mumoshu.android.app.tweetalarmclock"
+                    android:targetClass="jp.mumoshu.android.app.tweetalarmclock.AlarmSet" />
+</Preference>
 <Preference android:title="Twitterアカウント" android:summary="summary" android:key="twitter">
             <intent android:action="android.intent.action.VIEW"
                     android:data="imaokitter:///" />
