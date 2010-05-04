@@ -82,6 +82,14 @@ public class TwitterClient {
 		Log.i("OAuthEntry", "reason: " + reason);
 	}
 
+	public void tweetStatusIfPossible(String status) {
+		try {
+			tweetStatus(status);
+		} catch (Exception e){
+			onExceptionIn("tweetStatus", e);
+		}
+	}
+
 	public static TwitterClient getInstance(Context context) {
 		CommonsHttpOAuthConsumer consumer = new CommonsHttpOAuthConsumer(
 				"Znfa4v4ZSnoV0SLk8MKLA", "HWjzwsIeFWLOpGLXLTyHC0mOiCLlDO3GSTZQ8MKzFTA");
@@ -94,5 +102,9 @@ public class TwitterClient {
         				"http://api.twitter.com/oauth/authorize"));
 		new PreferencesRegistry(context).loadConsumer(consumer);
 		return c;
+	}
+
+	private void onExceptionIn(String source, Exception e) {
+		Log.e(getClass().getName(), "exception in: " + (source != null ? source : ""), e);
 	}
 }

@@ -1,6 +1,7 @@
 package jp.mumoshu.android.app.tweetalarmclock.activity;
 
 import jp.mumoshu.android.app.tweetalarmclock.R;
+import jp.mumoshu.android.app.tweetalarmclock.controller.TwitterClient;
 import jp.mumoshu.android.app.tweetalarmclock.preference.PreferencesRegistry;
 import android.app.Activity;
 import android.net.Uri;
@@ -35,6 +36,8 @@ public class VideoPlayer extends Activity implements OnClickListener {
 	public void onClick(View v) {
 		videoView.stopPlayback();
 		finish();
+		TwitterClient.getInstance(this).tweetStatusIfPossible(
+				new PreferencesRegistry(this).getMessage());
 	}
 	
 }
