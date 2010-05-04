@@ -5,11 +5,14 @@ import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
 import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.SharedPreferences.Editor;
+import android.preference.PreferenceManager;
 import android.widget.TimePicker;
 
 public class PreferencesRegistry {
 	private SharedPreferences p;
+	private Context context;
 	public PreferencesRegistry(Context c){
+		this.context = c;
 		p = c.getSharedPreferences("TweetAlarmClock", Context.MODE_PRIVATE);
 	}
 	public Editor getEditor(){
@@ -53,5 +56,8 @@ public class PreferencesRegistry {
 				p.getString("token", ""),
 				p.getString("token_secret", ""));
 		return consumer;
+	}
+	public String getMessage() {
+		return PreferenceManager.getDefaultSharedPreferences(context).getString("message", "ÇﬁÇ≠ÇËÅB");
 	}
 }

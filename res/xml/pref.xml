@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen
+  xmlns:android="http://schemas.android.com/apk/res/android">
+<PreferenceCategory><EditTextPreference android:key="message" android:dialogMessage="アラームを消したときに以下の内容をつぶやきます" android:title="おはようメッセージ" android:summary="summary1"></EditTextPreference>
+<Preference android:title="Twitterアカウント" android:summary="summary" android:key="twitter">
+            <intent android:action="android.intent.action.VIEW"
+                    android:data="imaokitter:///" />
+</Preference>
+</PreferenceCategory>
+</PreferenceScreen>

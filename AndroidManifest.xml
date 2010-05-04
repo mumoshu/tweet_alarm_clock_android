@@ -18,10 +18,14 @@
 <category android:name="android.intent.category.BROWSABLE"></category>
 <data android:scheme="imaokitter"></data>
 </intent-filter>
-</activity>
-<activity android:name=".activity.HomeMenu" android:launchMode="singleInstance"><intent-filter><category android:name="android.intent.category.LAUNCHER" /><action android:name="android.intent.action.MAIN"></action>
+<intent-filter><action android:name="jp.mumoshu.android.app.twitter_alarm_clock.OPEN_OAUTH_ENTRY"></action>
+<category android:name="android.intent.category.DEFAULT"></category>
 </intent-filter>
 </activity>
+<activity android:name=".activity.HomeMenu" android:launchMode="singleInstance">
+</activity>
+<activity android:launchMode="singleInstance" android:name=".activity.ApplicationPreference"><intent-filter><category android:name="android.intent.category.LAUNCHER" /><action android:name="android.intent.action.MAIN"></action>
+</intent-filter></activity>
 </application>
 
 
