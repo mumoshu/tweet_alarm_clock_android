@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import jp.mumoshu.android.app.tweetalarmclock.preference.PreferencesRegistry;
+import oauth.signpost.OAuthConsumer;
 import oauth.signpost.OAuthProvider;
 import oauth.signpost.basic.DefaultOAuthProvider;
 import oauth.signpost.commonshttp.CommonsHttpOAuthConsumer;
@@ -106,5 +107,9 @@ public class TwitterClient {
 
 	private void onExceptionIn(String source, Exception e) {
 		Log.e(getClass().getName(), "exception in: " + (source != null ? source : ""), e);
+	}
+
+	public OAuthConsumer getConsumer() {
+		return consumer;
 	}
 }

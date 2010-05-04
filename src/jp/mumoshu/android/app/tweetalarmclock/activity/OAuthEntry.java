@@ -88,6 +88,7 @@ public class OAuthEntry extends Activity {
 		oauthVerifier = uri.getQueryParameter(oauth.signpost.OAuth.OAUTH_VERIFIER);
 		try{
 			data.retrieveAccessToken(oauthVerifier);
+			new PreferencesRegistry(this).saveConsumer(data.getConsumer());
 		} catch (Exception e) {
 			Log.e("OAuthEntry", "while retrieving access token", e);
 			authErrorToast();
@@ -138,7 +139,7 @@ public class OAuthEntry extends Activity {
 	}
 
 	private void toast(String msg){
-		Toast.makeText(this, msg, Toast.LENGTH_SHORT);
+		Toast.makeText(this, msg, Toast.LENGTH_SHORT).show();
 	}
 	
 	private void authErrorToast(){
